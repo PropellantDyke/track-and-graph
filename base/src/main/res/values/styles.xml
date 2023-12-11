@@ -101,4 +101,86 @@
         <item name="android:inputType">textMultiLine|textAutoCorrect|textCapSentences</item>
     </style>
 
+    <style name="FancyFormScroll">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/ff_layout_bg</item>
+    </style>
+
+    <style name="FancyFormLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:padding">@dimen/ff_page_padding</item>
+        <item name="android:background">@color/ff_layout_bg</item>
+    </style>
+
+    <style name="FancyFormSection">
+        <item name="android:padding">@dimen/ff_section_padding</item>
+        <item name="android:background">@drawable/ff_section</item>
+    </style>
+
+    <style name="FancyFormHeader" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">@dimen/ff_header_font_size</item>
+        <item name="android:textColor">@color/ff_text</item>
+    </style>
+
+    <style name="FancyFormLabel" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/ff_text</item>
+    </style>
+
+    <style name="FancyFormError" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/ff_danger_text</item>
+    </style>
+
+    <style name="FancyFormInputText" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/ff_input_height</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:background">@drawable/ff_input</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:textSize">@dimen/ff_input_font_size</item>
+        <item name="android:textColor">@color/ff_input_text</item>
+    </style>
+
+    <style name="FancyFormInputMultiLine" parent="FancyFormInputText">
+        <item name="android:layout_height">@dimen/ff_multiline_height</item>
+    </style>
+
+    <style name="FancyFormSpinner" parent="Widget.AppCompat.Spinner">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/ff_input_height</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:background">@drawable/ff_spinner</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:textSize">@dimen/ff_input_font_size</item>
+        <item name="android:textColor">@color/ff_input_text</item>
+    </style>
+
+    <style name="FancyFormActionButton" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/ff_input_height</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:background">@drawable/ff_action_button</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:textSize">@dimen/ff_input_font_size</item>
+        <item name="android:textColor">@color/ff_button_text</item>
+        <item name="android:elevation">0dp</item>
+        <item name="shapeAppearance">@null</item>
+    </style>
+
+    <style name="FancyFormSwitch">
+        <item name="android:textColorLink">@color/ff_color_vivid</item>
+        <item name="android:minHeight">0dp</item>
+    </style>
 </resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/ff_input_bg" />
+    <stroke android:color="@color/ff_input_border" android:width="@dimen/ff_input_border" />
+    <corners android:radius="@dimen/ff_input_corner" />
+</shape>

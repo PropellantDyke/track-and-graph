@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- spinner_background.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background for the entire Spinner -->
+    <item android:drawable="@drawable/ff_input" />
+
+    <!-- Arrow icon for the Spinner -->
+    <item android:drawable="@drawable/ic_play_timer" android:gravity="end|center_vertical" />
+
+</layer-list>

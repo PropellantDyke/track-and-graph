@@ -281,6 +281,22 @@
     <string name="label_descending">Label descending</string>
     <string name="latest">Latest</string>
     <string name="oldest">Oldest</string>
+
+    <string-array name="suggestion_types">
+        <item>Value and label</item>
+        <item>Value only</item>
+        <item>Label only</item>
+        <item>None</item>
+    </string-array>
+
+    <string-array name="suggestion_orders">
+        <item>Value ascending</item>
+        <item>Value descending</item>
+        <item>Label ascending</item>
+        <item>Label descending</item>
+        <item>Latest</item>
+        <item>Oldest</item>
+    </string-array>
     <string name="track_all">Track all</string>
     <string name="more_details">More details</string>
     <string name="suggestions">Suggestions</string>

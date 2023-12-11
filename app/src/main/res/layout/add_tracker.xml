@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="android.view.View"/>
+        <variable name="uiData" type="com.samco.trackandgraph.addtracker.AddTrackerFragment.UiData"/>
+    </data>
+
+    <ScrollView style="@style/FancyFormScroll">
+
+        <LinearLayout
+            style="@style/FancyFormLayout"
+            android:orientation="vertical"
+            android:animateLayoutChanges="true">
+
+            <ImageView
+                android:id="@+id/closeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:contentDescription="@string/close"
+                android:src="@drawable/ic_close"
+                app:tint="@color/ff_color_vivid" />
+
+            <TextView
+                style="@style/FancyFormHeader"
+                android:text="@string/add_tracker" />
+
+            <TextView
+                style="@style/FancyFormLabel"
+                android:layout_marginTop="@dimen/ff_separator"
+                android:labelFor="@+id/inputName"
+                android:text="@string/tracker_name" />
+
+            <EditText
+                android:id="@+id/inputName"
+                style="@style/FancyFormInputText"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:text="@={uiData.trackerName}" />
+
+            <TextView
+                android:id="@+id/errorName"
+                style="@style/FancyFormError"
+                android:text="@string/tracker_name_cannot_be_null"
+                android:visibility="gone" />
+
+            <TextView
+                style="@style/FancyFormError"
+                android:text="@string/tracker_name_cannot_be_null"
+                android:visibility="@{uiData.errorNameEmpty ? View.VISIBLE : View.GONE}" />
+
+            <TextView
+                style="@style/FancyFormError"
+                android:text="@string/tracker_with_that_name_exists"
+                android:visibility="@{uiData.errorNameTaken ? View.VISIBLE : View.GONE}" />
+
+            <TextView
+                style="@style/FancyFormLabel"
+                android:layout_marginTop="@dimen/ff_separator"
+                android:labelFor="@+id/inputDescription"
+                android:text="@string/add_a_longer_description_optional" />
+
+            <EditText
+                android:id="@+id/inputDescription"
+                style="@style/FancyFormInputMultiLine"
+                android:ems="10"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine"
+                android:text="@={uiData.trackerDescription}" />
+
+            <TextView
+                style="@style/FancyFormLabel"
+                android:layout_marginTop="@dimen/ff_separator"
+                android:labelFor="@+id/inputName"
+                android:text="Tracker type" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/inputDataType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/dataTypeContinuous"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Numeric value" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/dataTypeDuration"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Duration" />
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <LinearLayout
+                style="@style/FancyFormSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ff_separator"
+                android:orientation="vertical"
+                android:animateLayoutChanges="true">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchDefault"
+                    style="@style/FancyFormSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/use_default_value"
+                    android:checked="@={uiData.defaultSection}" />
+
+                <LinearLayout
+                    android:id="@+id/sectionDefault"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="@{uiData.defaultSection ? View.VISIBLE : View.GONE}">
+
+                    <TextView
+                        style="@style/FancyFormLabel"
+                        android:layout_marginTop="@dimen/ff_separator"
+                        android:labelFor="@+id/inputDefaultValue"
+                        android:text="@string/value" />
+
+                    <EditText
+                        android:id="@+id/inputDefaultValue"
+                        style="@style/FancyFormInputText"
+                        android:ems="10"
+                        android:importantForAutofill="no"
+                        android:inputType="numberDecimal"
+                        android:text="@={uiData.defaultValue}" />
+
+                    <TextView
+                        style="@style/FancyFormLabel"
+                        android:layout_marginTop="@dimen/ff_separator"
+                        android:labelFor="@+id/inputDefaultLabel"
+                        android:text="@string/label" />
+
+                    <EditText
+                        android:id="@+id/inputDefaultLabel"
+                        style="@style/FancyFormInputText"
+                        android:ems="10"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:text="@={uiData.defaultLabel}" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/FancyFormSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ff_separator"
+                android:orientation="vertical"
+                android:animateLayoutChanges="true">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchSuggestion"
+                    style="@style/FancyFormSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Customize suggestions"
+                    android:checked="@={uiData.suggestionSection}" />
+
+                <LinearLayout
+                    android:id="@+id/sectionSuggestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="@{uiData.suggestionSection ? View.VISIBLE : View.GONE}">
+
+                    <TextView
+                        style="@style/FancyFormLabel"
+                        android:layout_marginTop="@dimen/ff_separator"
+                        android:text="@string/type_colon" />
+
+                    <Spinner
+                        android:id="@+id/inputSuggestionType"
+                        style="@style/FancyFormSpinner"
+                        android:entries="@array/suggestion_types"
+                        android:selectedItemPosition="@={uiData.suggestionType}" />
+
+                    <TextView
+                        style="@style/FancyFormLabel"
+                        android:layout_marginTop="@dimen/ff_separator"
+                        android:text="@string/order_colon" />
+
+                    <Spinner
+                        android:id="@+id/inputSuggestionOrder"
+                        style="@style/FancyFormSpinner"
+                        android:entries="@array/suggestion_orders"
+                        android:selectedItemPosition="@={uiData.suggestionOrder}" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/actionButton"
+                style="@style/FancyFormActionButton"
+                android:layout_marginTop="@dimen/ff_separator"
+                android:text="@{uiData.isNewTracker ? @string/create : @string/edit}" />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

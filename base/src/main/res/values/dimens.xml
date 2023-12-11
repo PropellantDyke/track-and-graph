@@ -48,4 +48,17 @@
     <dimen name="text_body_size">15sp</dimen>
     <dimen name="small_label_size">10sp</dimen>
     <dimen name="card_elevation">4dp</dimen>
+
+    <dimen name="ff_page_padding">30dp</dimen>
+    <dimen name="ff_section_padding">15dp</dimen>
+    <dimen name="ff_section_corner">20dp</dimen>
+    <dimen name="ff_header_font_size">22sp</dimen>
+    <dimen name="ff_separator">20dp</dimen>
+    <dimen name="ff_input_height">48dp</dimen>
+    <dimen name="ff_multiline_height">100dp</dimen>
+    <dimen name="ff_input_border">1.5dp</dimen>
+    <dimen name="ff_input_border_focus">2dp</dimen>
+    <dimen name="ff_input_font_size">14sp</dimen>
+    <dimen name="ff_input_corner">14dp</dimen>
+    <dimen name="ff_button_corner">40dp</dimen>
 </resources>

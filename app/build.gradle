@@ -119,6 +119,7 @@ dependencies {
     implementation "androidx.compose.material:material:$composeVersion"
     implementation "com.google.android.material:compose-theme-adapter:1.2.1"
     implementation 'com.google.accompanist:accompanist-pager:0.28.0'
+    implementation 'com.google.android.material:material:1.10.0'
 
     // Android KTX
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'

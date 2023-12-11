@@ -61,4 +61,21 @@
     <color name="visColor10">#313695</color>
     <color name="visColor11">#54D931</color>
     <color name="visColor12">#1B8200</color>
+
+    <!-- Colors used for FancyForm -->
+    <color name="ff_input_bg">#ffffff</color>
+    <color name="ff_layout_bg">#fffbfa</color>
+    <color name="ff_input_border">#e8d7d0</color>
+    <color name="ff_note">#8d8d8d</color>
+    <color name="ff_input_text">#6e6e6e</color>
+    <color name="ff_text">#383838</color>
+    <color name="ff_color_clear">#fdf4f1</color>
+    <color name="ff_color_sweet">#ffe8e1</color>
+    <color name="ff_color_vivid">#f46d43</color>
+    <color name="ff_danger_bg">#ffd9d9</color>
+    <color name="ff_danger_text">#db3838</color>
+    <color name="ff_success_bg">#d5efc9</color>
+    <color name="ff_success_text">#4ea326</color>
+    <color name="ff_disabled">#ded1cb</color>
+    <color name="ff_section">#ffe8e1</color>
 </resources>
